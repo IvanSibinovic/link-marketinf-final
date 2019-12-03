@@ -319,6 +319,10 @@ ul {
   -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
   animation: mymove 5s infinite;
 }
+.popping-up {
+  -webkit-animation: popping 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: popping 5s infinite;
+}
 /* animations from CSS-Animations library */
 @-webkit-keyframes pulse {
   from {
@@ -359,6 +363,39 @@ ul {
   animation-name: pulse;
 }
 
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
 .animated {
   -webkit-animation-duration: 1.3s;
   animation-duration: 1.3s;
@@ -379,9 +416,9 @@ ul {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-.animated.delay-5s {
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
+.animated.delay-6s {
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
 }
 
 .section {
