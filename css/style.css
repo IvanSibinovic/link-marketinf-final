@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body{
   margin:0;
   box-sizing: border-box;
@@ -53,7 +56,7 @@ nav ul {
 }
 ul {
   text-align: right;
-  width: 70%;
+  width: 60%;
   margin: 0 auto;
   padding: 0;
   display: inline-block;
@@ -230,6 +233,7 @@ ul {
 }
 .card-icon {
   font-size: 60px;
+  color: #FBA92E;
 }
 .card-icon span {
   font-size: 30px;
@@ -300,24 +304,86 @@ ul {
 
 .header-content h1{
   font-size:60px;
-font-family: 'Roboto', sans-serif;
   margin-bottom: 1rem;
   text-transform: uppercase;
 }
-.header-content h4 {
-  font-family: 'Merriweather', serif;
-}
 .header-content h2{
   margin-top: 2rem;
-  font-size:46px;
+  font-size:42px;
   display:block;
 }
-.header-content a{
-  color: #d7d7d7;
+.scroll-down {
+  color: #FBA92E;
   margin-top: 2rem;
-  font-size:1.3rem;
-  display:block;
+  font-size:3rem;  
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
 }
+/* animations from CSS-Animations library */
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1) translateY(0);
+    transform: scale3d(1, 1, 1) translateY(0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.5, 1.5, 1.5) translateY(150px);
+    transform: scale3d(1.5, 1.5, 1.5) translateY(15px);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1) translateY(0);
+    transform: scale3d(1, 1, 1) translateY(0);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1) translateY(0);
+    transform: scale3d(1, 1, 1) translateY(0);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.25, 1.25, 1.25) translateY(15px);
+    transform: scale3d(1.25, 1.25, 1.25) translateY(15px);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1) translateY(0);
+    transform: scale3d(1, 1, 1) translateY(0);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+.animated {
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@media (print), (prefers-reduced-motion: reduce) {
+  .animated {
+    -webkit-animation-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    -webkit-transition-duration: 1ms !important;
+    transition-duration: 1ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.delay-5s {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
 .section {
   height: 100vh;
 }
@@ -329,6 +395,9 @@ font-family: 'Roboto', sans-serif;
 #poziv {
   color: #f7f7f7;
   background-color: #333;
+}
+#poziv p {
+  text-align: center;
 }
 .sider {
   width: 50%;
@@ -352,9 +421,15 @@ font-family: 'Roboto', sans-serif;
 }
 .next {
   text-align: center;
+  padding-top: 1rem;
 }
 .next a {
-  color: #f7f7f7;
+  color: #FBA92E;
+  text-decoration: none;
+}
+.next a p {
+  margin: 0;
+  font-size: 15px;
 }
 /* friends ribbon  */
 .friends {
@@ -405,11 +480,27 @@ line-height: 0;
   width: 100%;
   font-size: 1rem;
 }
+.my-button {
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  background-color: #333;
+  color: #ddd;
+  padding: 5px 10px;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.under-button {
+  font-size: 16px;
+}
 
 @media (max-width:768px) {
   .header-content h1{
     font-size:40px;
-    font-family: 'Kaushan Script', cursive;
+    margin-bottom: 1rem;
+  }
+  .header-content h2{
+    font-size:28px;
     margin-bottom: 1rem;
   }
   .row {
@@ -436,6 +527,27 @@ line-height: 0;
   .col2 {
     width: 80%;
   }
+  .imgbkg {
+  background: url(../media/img/missing-small.jpg) no-repeat top left;
+  height: 70vh;
+}
+.imgbkg2 {
+  background: url(../media/img/idk-small.jpg) no-repeat bottom right;
+  height: 70vh;
+}
+.parallax {
+  padding: 3rem 1.5rem;
+  background: url(../media/img/hd-bg0.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+.parallax div {
+  padding: 1rem;
+  text-align: center;
+}
+.parallax h2 {
+  font-size: 1.25em;
+}
   #contact {
   background: url(../media/img/contact-small.jpg) no-repeat center center;
 }

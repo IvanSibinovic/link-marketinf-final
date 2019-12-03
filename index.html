@@ -4,10 +4,20 @@
 	<title>Линк Маркетинг</title>
 
     <!-- Required meta tags -->
+    <meta property="og:image" content="media/img/cv.jpg">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <meta name="description"
+    content="Линк Маркетинг је фирма која се бави израдом веб-сајтова, дизајнирањем логоа и вођењем рекламних кампања.">
+    <meta name="keywords" content="izrada sajtova, izrada veb sajtova, izrada veb-sajtova sajt, veb sajt, veb, veb-sajt, reklama, marketing, prvo mesto na gugl pretrazi">
+    <!-- favicon -->
+    <link rel="icon" href="icon.ico" type="image/x-icon" />
+    <!-- animations on scroll -->
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- My Stylesheet -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 	<link href="https://fonts.googleapis.com/css?family=Exo+2|Roboto&display=swap" rel="stylesheet">
 	<script type="text/javascript" src="js/typed.js"></script>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -17,18 +27,17 @@
 <body>
 		<div class="overlaid"></div>
 		<nav>
-			<div id="shrinked" class="toggle"><a href='#'><img src='logo1.png' style="height: 50px;"></a><i
+			<div id="shrinked" class="toggle"><a href='#'><img src='media/img/linklogoo.png' style="padding-top: 5px; height: 50px;"></a><i
 	        class="fas fa-bars menu" aria-hidden="true"></i></div>
 	        <div id="logoWide">
 	        	<a href="#">
-	        		<div id="logo-img"><img src="logo1.png" style="height: 50px;"></div><span id="logo-txt">Линк Маркетинг</span>
+	        		<div id="logo-img"><img src="media/img/linklogoo.png" style="padding-top: 5px; height: 50px;"></div><span id="logo-txt">ЛИНК МАРКЕТИНГ</span>
 	        	</a>
 	        </div>
 	        <ul>
-	        	<li class="tags return"><a href="o-nama.html">ПОЧЕТАК</a></li>
-		    	<li class="tags"><a href="#hot">УСЛУГЕ</a></li>
-		    	<li class="tags"><a href="#timetable">ПАКЕТИ</a></li>
-			    <li class="tags"><a href="#gallery">ОДЛУКА</a></li>
+	        	<li class="tags return"><a href="#">ПОЧЕТАК</a></li>
+		    	<li class="tags"><a href="#kako">УСЛУГЕ</a></li>
+		    	<li class="tags"><a href="#paketi">ПАКЕТИ</a></li>
 			    <li class="tags"><a href="#contact">КОНТАКТ</a></li>
 	    	</ul>
 		</nav>
@@ -55,11 +64,11 @@
 				<span id="typed"></span>
 			</h1>
 		<h2>НА ПРАВОМ СТЕ МЕСТУ</h2>
-      	<a href="#about" class="btn" data-aos="zoom-in" data-aos-delay="1500"><i class="fas fa-chevron-down"></i></a>
+      	<a href="#pocetak" class="scroll-down" data-aos="zoom-in" data-aos-delay="1500"><i class="animated infinite pulse fas fa-chevron-down"></i></a>
     </div>
   </header>
 
-  	<section id="o-nama">
+  	<section id="pocetak">
         <div class="row">
 	        <div class="col">
 	        	<div class="txt-holder">
@@ -93,6 +102,7 @@
         		<h2>Израда веб-сајтова</h2>
         		<h1 class="card-icon"><i class="fas fa-desktop"></i> <span><i class="fas fa-tablet-alt"></i></span></h1>
         		<p>Веб-сајтови су Ваше пословнице у савременом свету. Модерно дизајниран и функционалан веб-сајт показује озбиљност у пословању.</p>
+        		<!--<p>Сви наши веб-сајатови имају прилагодљив приказ што значи да изгледају добро на свим уређајима. 67% укупног интернет саобраћаја у 2018. је обављен путем мобилних уређаја.</p> -->
         	</div>
         	<div class="col2 info-card">
         		<h2>Гугл оптимизација</h2>
@@ -123,7 +133,7 @@
         	<div class="col2 info-card">
         		<h2>Основни</h2>
         		<h3>€100 једнократно</h3>
-        		<h3>€15 MESEČNO</h3>
+        		<h3>€15 месечно</h3>
         		<p>израда веб-сајта</p>
         		<p>закуп домена</p>
         		<p>закуп хостинга</p>
@@ -167,12 +177,10 @@
 		        	<p class="lead">У Линк Маркетингу схватамо да је за предузетнике непрактично да се упуштају у истраживање начина функционисања савремених технологија.</p>
 		        	<p class="lead">Слободно нас позовите да обавимо информативни разговор, радо ћемо Вам све објаснити. Направићемо понуду која ће на најбољи начин одговорити Вашим потребама</p>
 		        	<div class="next">
-		        		<p>контакт информације</p>
-		        		<p>
-		        			<a href="#about" class="btn" data-aos="zoom-in" data-aos-delay="1500">
-		        				<i class="fas fa-chevron-down"></i>
-		        			</a>
-		        		</p>
+		        		<a href="#about" data-aos="zoom-in" data-aos-delay="1500">
+		        			<p>контакт информације</p>
+		        			<i class="animated infinite pulse fas fa-chevron-down"></i>
+		        		</a>
 		        	</div>
 		        </div>
 	        </div>
@@ -211,6 +219,8 @@
 		        	<input class="input" type="text" id="lname" name="lastname" placeholder="Ваш имејл">
 		        	<input class="input" type="text" id="lname" name="lastname" placeholder="Ваш телефон">
 		        	<textarea class="input" id="subject" name="subject" placeholder="Питајте све што Вас занима..." style="height:200px"></textarea>
+		        	<button class="my-button">Пошаљи <i class="fas fa-paper-plane"></i></button>
+		        	<p class="under-button">Одговорићемо у најкраћем могућем року</p>
 		        </div>
 	        </div>
         </div>
