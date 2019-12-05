@@ -12,6 +12,12 @@ font-family: 'Exo 2', sans-serif;
   color:#333;
   overflow-x:hidden;
 }
+em {
+  font-weight: bold;
+}
+.oranged {
+  color: #fbba57;
+}
 nav {
   position: absolute;
   top: 0;
@@ -222,6 +228,12 @@ ul {
 .col2 {
   flex: 1;
 }
+.pt-175 {
+  padding-top: 1.75rem;
+}
+.pb-15 {
+  padding-bottom: 1.5rem;
+}
 .info-card {
   margin: 1rem;
   padding: 1rem;
@@ -230,6 +242,15 @@ ul {
   -webkit-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.75);
+}
+.borderShaded {
+  border-bottom: 2px solid #777;
+}.borderShaded2 {
+  border-bottom: 2px solid #777;
+}
+.small-ico {
+  font-size: 25px;
+  padding-right: 7px;
 }
 .card-icon {
   font-size: 60px;
@@ -322,6 +343,47 @@ ul {
 .popping-up {
   -webkit-animation: popping 5s infinite; /* Safari 4.0 - 8.0 */
   animation: popping 5s infinite;
+}
+
+
+.tooltip {
+  position: relative;
+  display: block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -120px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 100;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 /* animations from CSS-Animations library */
 @-webkit-keyframes pulse {
@@ -416,6 +478,10 @@ ul {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+.animated.delay-1s {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
 .animated.delay-6s {
   -webkit-animation-delay: 7s;
   animation-delay: 7s;
@@ -464,9 +530,9 @@ ul {
   color: #FBA92E;
   text-decoration: none;
 }
-.next a p {
+.next a i {
   margin: 0;
-  font-size: 15px;
+  font-size: 40px;
 }
 /* friends ribbon  */
 .friends {
